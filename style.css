@@ -1,63 +1,300 @@
 *{
-  padding: 0;
   margin: 0;
-}
-body{
-  margin: 0;
-  font-size: 28px;
-  font-family: fantasy;
+  
 }
 
 .header{
-  background-color: rgb(91, 91, 91);
-  padding: 30px;
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(34, 33, 33, 0.7),rgba(59, 59, 59, 0.7)),url(images/shaun2.jpg); 
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
 }
 
-.header h2{
-  color: #f2f2f2;
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header p{
-  color: #f2f2f2;
+nav img{
+  width: 150px;
+  border-radius: 80px;
 }
 
-.header h1{
-  color: #f2f2f2;
-}
-
-#navbar{
+.nav-links{
+  flex: 1;
+  text-align: right;
   position: sticky;
   top: 0;
   overflow: hidden;
-  background-color: #333;
 }
 
-#navbar a{
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+ }
+
+.nav-links ul li a{
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 17px;
-}
-#navber a:hover{
-background-color: #606060;
-color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
-#navbar a.active{
-  background-color: #7d7d7d;
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+.text-box{
+  width: 90%;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%,-50%);text-align: center;
+  
+}
+
+.text-box h1{
+  padding: auto;
+  margin: auto;
+  font-size: 50px;
+}
+
+.text-box p{
+  margin: auto;
+  font-size: 15px;
   color: rgb(255, 255, 255);
 }
 
-.content{
-  padding: 16px;
+
+.See-More:hover{
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  background: rgb(255, 255, 255);
+  transition: 0.6s ease-in-out;
 }
 
-.content h3{
+@media(max-width: 700){
+  .text-box h1{
+    font-size: 20px;
+  }
+    .nav-links ul li{
+      display: block;
+    }
+    .nav-links{
+      position: absolute;
+      background: rgb(252, 252, 252);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200;
+      text-align: left;
+      z-index: 2;
+    }
+
+    nav .fa{
+      display: block;
+      color: rgb(255, 255, 255);
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .nav-links ul{
+      padding: 30px;
+    }
+
+}
+
+ /*-- about me --*/
+
+.about-me{
+  width: 100%;
+  margin: auto;
   text-align: center;
-  font-size: larger;
+  padding-top: 50px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-me h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.coaches-col{
+  flex-basis: 35%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coaches-col img{
+  width: 100%;
+  display: block;
+}
+
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+.layer:hover{
+  background: rgba(58, 58, 58, 0.5);
+}
+
+.layer h3{
+  width: 100%;
+  font-weight: 500;
+  color: rgb(253, 253, 253);
+  font-size: 25px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.layer:hover h3{
+  bottom: 49%;
+  opacity: 1;
+}
+
+
+ /*-- Project --*/
+
+.projects{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  background: #000000;
+  color: aliceblue;
+ }
+
+ .projects p{
+  font-size: 25px;
+}
+
+ .projects-col{
+  flex-basis: 35%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+ /*-- Contact me --*/
+
+.contact{
+  margin: 100px auto;
+  width: 100%;
+  background-image:linear-gradient(rgba(1, 1, 1, 0.7),rgba(0, 0, 0, 0.7)),url(/Users/test/Desktop/images/20241214_110910.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 200px 0;
+}
+
+.contact h1{
   color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  padding: 0;
+}
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width: 700px){
+  .contact-us h1{
+    font-size: 24px;
+  }
+}
+
+/*-- footer --*/
+
+.footer{
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+  background: #000000;
+  color: aliceblue;
+
+}
+
+.footer h1{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+ 
+}
+
+.card-continer{
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+
+}
+.card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+.card:hover{
+  transform: rotateY(180deg);
+}
+.card-side{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(198, 198, 198, 0.2);
+  color: rgb(174, 173, 173);
+  font-size: 30px;
+}
+.card-front{
+  background: #000000;
+}
+.card-back{
+  background: #000000;
+  transform: rotateY(180deg);
 }
