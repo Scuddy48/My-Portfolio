@@ -1,22 +1,31 @@
 *{
   margin: 0;
-  
+  padding: 0;
 }
 
+body{
+  margin: 0;
+}
+
+
+
 .header{
-  position: sticky;
-  top: 0;
-  padding: 10px 16px;
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(34, 33, 33, 0.7),rgba(59, 59, 59, 0.7)),url(images/shaun2.jpg); 
   background-position: center;
   background-size: cover;
+  position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings:"wdth" 100 ;
+}
+@media(max-width: 500){
+  .header {
+    font-size: 20px;
+  }
 }
 
 nav{
@@ -24,11 +33,6 @@ nav{
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
-}
-
-nav img{
-  width: 150px;
-  border-radius: 80px;
 }
 
 .nav-links{
@@ -76,16 +80,21 @@ nav img{
 }
 
 .text-box h1{
-  padding: auto;
-  margin: auto;
+  margin-left: 150px;
   font-size: 50px;
+  text-shadow: 3px 5px gray;
 }
 
 .text-box p{
-  margin: auto;
+  margin-left: 150px;
   font-size: 15px;
   color: rgb(255, 255, 255);
 }
+@media(max-width: 500){
+  .text-box {
+    font-size: 20px;
+  }
+
 
 
 .See-More:hover{
@@ -95,10 +104,6 @@ nav img{
   transition: 0.6s ease-in-out;
 }
 
-@media(max-width: 700){
-  .text-box h1{
-    font-size: 20px;
-  }
     .nav-links ul li{
       display: block;
     }
@@ -123,9 +128,7 @@ nav img{
     .nav-links ul{
       padding: 30px;
     }
-
-}
-
+  }
  /*-- about me --*/
 
 .about-me{
@@ -184,6 +187,12 @@ nav img{
 .layer:hover h3{
   bottom: 49%;
   opacity: 1;
+}
+
+@media(max-width: 700px){
+  .row{
+    flex-direction: column;
+  }
 }
 
 
@@ -252,7 +261,7 @@ nav img{
   padding: 30px 0;
   font-size: 30px;
   background: #000000;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 
 }
 
@@ -263,11 +272,10 @@ nav img{
  
 }
 
-.card-continer{
+.card-container{
   width: 300px;
   height: 200px;
-  perspective: 1000px;
-
+  perspective: 1000px; /* This creates a 3D effect */
 }
 .card{
   width: 100%;
@@ -289,14 +297,14 @@ nav img{
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(198, 198, 198, 0.2);
-  color: rgb(174, 173, 173);
-  font-size: 30px;
+  box-shadow: 0 4px gray;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
 }
 .card-front{
-  background: #000000;
+  background: rgb(255, 255, 255);
 }
 .card-back{
-  background: #000000;
+  background: rgb(255, 255, 255);
   transform: rotateY(180deg);
 }
