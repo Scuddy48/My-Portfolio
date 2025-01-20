@@ -1,2 +1,1 @@
-scrapped first draft and have started over with new idea.
-So I have changed the colour scheme to black and white, Im happy with how the site looks but my sticky bar is not traveling down the full page but stopping where my header ends??
+This is my profile, the aim of this is to showcase my developing skills as a frontend developer, I have linked another web page I have nearly completed.
